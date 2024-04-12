@@ -13,6 +13,8 @@ public class Main {
         System.out.println("Введите второе число:");
         int b = scanner.nextInt();
 
+        if (operation == '/' && b == 0) throw new ArithmeticException("Деление на ноль");
+
         int result = switch (operation) {
             case '+' -> a + b;
             case '-' -> a - b;
